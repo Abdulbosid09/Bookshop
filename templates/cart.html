@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="shortcut icon" type="image/icon" href="{% static 'assets/logo/favicon.png'%}"/>
+   		
+        <link rel="stylesheet"  href="{% static 'assets/css/dashboard.css'%}" >
+
+		<!--font-awesome.min.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css'%}" />
+
+		<!--animate.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/animate.css'%}" />
+
+		<!--hover.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/hover-min.css'%}">
+
+		<!--datepicker.css-->
+		<link rel="stylesheet"  href="{% static 'assets/css/datepicker.css'%}" >
+
+		<!--owl.carousel.css-->
+        <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css'%}">
+		<link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css'%}"/>
+
+		<!-- range css-->
+        <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.min.css'%}" />
+
+		<!--bootstrap.min.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}" />
+
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="{% static 'assets/css/bootsnav.css'%}"/>
+
+		<!--style.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/style.css'%}" />
+
+		<!--responsive.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}" />
+<div class="packages-content">
+  <div class="row">
+    {% for i in cart %}
+
+    <div class="col-md-4 col-sm-6">
+      <div class="single-package-item">
+        <img src="{{i.product.image.url}}" alt="package-place">
+        <div class="single-package-item-txt">
+          <h3>{{i.product.name}} <span class="pull-right"></span></h3>
+
+          <h3>${{i.product.price}}</h3>
+
+          <div class="packages-para">
+            <a class="btn btn-danger" href="{% url 'deleteCart' i.id %}">Delete</a>
+          </div><!--/.packages-para-->
+          <div class="about-btn">
+
+          </div><!--/.about-btn-->
+        </div><!--/.single-package-item-txt-->
+      </div><!--/.single-package-item-->
+
+    </div><!--/.col-->
+    {% endfor %}
+  </div>
+</div>
+
+<script src="{% static 'assets/js/jquery.js'%}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<!--modernizr.min.js-->
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+<!--bootstrap.min.js-->
+<script  src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+
+<!-- bootsnav js -->
+<script src="{% static 'assets/js/bootsnav.js'%}"></script>
+
+<!-- jquery.filterizr.min.js -->
+<script src="{% static 'assets/js/jquery.filterizr.min.js'%}"></script>
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<!--jquery-ui.min.js-->
+    <script src="{% static 'assets/js/jquery-ui.min.js'%}"></script>
+
+    <!-- counter js -->
+<script src="{% static 'assets/js/jquery.counterup.min.js'%}"></script>
+<script src="{% static 'assets/js/waypoints.min.js'%}"></script>
+
+<!--owl.carousel.js-->
+    <script  src="{% static 'assets/js/owl.carousel.min.js'%}"></script>
+
+    <!-- jquery.sticky.js -->
+<script src="{% static 'assets/js/jquery.sticky.js'%}"></script>
+
+    <!--datepicker.js-->
+    <script  src="{% static 'assets/js/jquery.sticky.js'%}"></script>
+
+<!--Custom JS-->
+<script src="{% static 'assets/js/custom.js'%}"></script>
+
+
+
+{% endblock content %}

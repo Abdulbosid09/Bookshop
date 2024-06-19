@@ -1,0 +1,283 @@
+{% extends 'base.html' %}
+<!doctype html>
+{% load static %}
+<html class="no-js"  lang="en">
+{% block content %}
+	<head>
+		<!-- META DATA -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+
+		<!-- TITLE OF SITE -->
+		<title>BOOKS</title>
+
+		<!-- favicon img -->
+		<link rel="shortcut icon" type="image/icon" href="{% static 'assets/logo/favicon.png'%}"/>
+   		
+        <link rel="stylesheet"  href="{% static 'assets/css/dashboard.css'%}" >
+
+		<!--font-awesome.min.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css'%}" />
+
+		<!--animate.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/animate.css'%}" />
+
+		<!--hover.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/hover-min.css'%}">
+
+		<!--datepicker.css-->
+		<link rel="stylesheet"  href="{% static 'assets/css/datepicker.css'%}" >
+
+		<!--owl.carousel.css-->
+        <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css'%}">
+		<link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css'%}"/>
+
+		<!-- range css-->
+        <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.min.css'%}" />
+
+		<!--bootstrap.min.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}" />
+
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="{% static 'assets/css/bootsnav.css'%}"/>
+
+		<!--style.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/style.css'%}" />
+
+		<!--responsive.css-->
+		<link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}" />
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+			your browser</a> to improve your experience and security.</p>
+		<![endif]-->
+
+
+	
+
+		
+		
+       
+		<!--galley start-->
+		
+		
+
+
+				
+		<!--packages start-->
+		<section id="pack" class="packages">
+			<div class="container">
+				<div class="gallary-header text-center">
+					<h2>
+					Sotuvdagi Kitoblar Jamlammasi
+					</h2>
+					<p>
+					o'zing tanla!
+					</p>
+
+				
+				</div><!--/.gallery-header-->
+			
+		<div class="packages-content">
+			<div class="row">
+				{% for i in products %}
+
+				<div class="col-md-4 col-sm-6">
+					<div class="single-package-item">
+						<img src="{{i.image.url}}" alt="package-place">
+						<div class="single-package-item-txt">
+							<h3>{{i.name}} <span class="pull-right"></span></h3>
+						
+							<h3>${{i.price}}</h3>
+							<a href=""></a>
+							<div class="packages-para">
+							<a href="{% url 'batafsil' i.id %}">Batafsil</a>
+							</div><!--/.packages-para-->
+							<div class="packages-review">
+								<p>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									
+								</p>
+							</div><!--/.packages-review-->
+							<div class="about-btn">
+								
+							</div><!--/.about-btn-->
+						</div><!--/.single-package-item-txt-->
+					</div><!--/.single-package-item-->
+
+				</div><!--/.col-->
+				{% endfor %}
+			</div>
+		</div>
+
+
+		
+		<!--blog start-->
+		<section id="blog" class="blog">
+			<div class="container">
+				<div class="blog-details">
+						<div class="gallary-header text-center">
+							<h2>
+								Eng ko'p Sotilgan Kitoblar
+							</h2>
+							<p>
+							
+							</p>
+						</div><!--/.gallery-header-->
+						<div class="blog-content">
+							<div class="row">
+
+								<div class="col-sm-4 col-md-4">
+									<div class="thumbnail">
+										<h2>Harry Potter<span></span></h2>
+										<div class="thumbnail-img">
+											<img src="https://images.ctfassets.net/usf1vwtuqyxm/5HpitB8b87idAWpRnBJFvG/ece999c2b615eccb67434482c95fb15f/minalima-lifestyle-cover-in-situ.jpg" alt="blog-img">
+											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
+										
+										</div><!--/.thumbnail-img-->
+									  
+										<div class="caption">
+											<div class="blog-txt">
+												<h3>
+													<a href="#">
+														$566
+													</a>
+												</h3>
+												<p>
+													Garri Potter etti seriyadir xayoliy romanlar ingliz muallifi tomonidan yozilgan J. K. Rouling. Romanlarda yosh sehrgar Garri Potter va uning do'stlari Germiona Grenjer va Ron Uizli hayoti aks ettirilgan, ularning barchasi Xogvarts jodugarlik va sehrgarlik maktabining talabalari. Asosiy hikoya yoyi Garrining o'lmas bo'lishni, sehrgarlik vazirligi deb nomlanuvchi sehrgar boshqaruv organini ag'darishni va barcha sehrgarlar va Muggllarni (sehrli bo'lmagan odamlarni) bo'ysundirmoqchi bo'lgan qorong'u sehrgar Lord Voldemort bilan ziddiyatiga tegishli. 
+												</p>
+												
+											</div><!--/.blog-txt-->
+										</div><!--/.caption-->
+									</div><!--/.thumbnail-->
+
+								</div><!--/.col-->
+
+								<div class="col-sm-4 col-md-4">
+									<div class="thumbnail">
+										<h2>Yulduzlar Aybdor <span></span></h2>
+										<div class="thumbnail-img">
+											<img src="https://cdn1.ozone.ru/s3/multimedia-w/6126373424.jpg" alt="blog-img">
+											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
+										
+										</div><!--/.thumbnail-img-->
+										<div class="caption">
+											<div class="blog-txt">
+												<h3>
+													<a href="#">
+														$65
+													</a>
+												</h3>
+												<p>
+													Xeyzel Greys Lankaster — 16 yoshli oʻpkada mestastaza qoldiradigan qalqonsimon bez saratoni bilan kasallangan qiz. U har hafta koʻmak guruhiga boradi va u yerda 17 yoshli osteosarkoma sababli oyogʻi amputatsiya qilingan Ogastus Uoters bilan tanishadi. Ular birga film koʻrishadi, kitob oʻqishadi. Xeyzel yigitga Piter van Xutenning „Shohona dard” nomli asarini oʻqishga beradi. Asar tugallanmay qolganidan Ogastus norozi boʻladi va muallifga xat yozadi. Muallif faqat yuzma-yuz javob berishini aytadi.
+												</p>
+												
+											</div><!--/.blog-txt-->
+										</div><!--/.caption-->
+									</div><!--/.thumbnail-->
+
+								</div><!--/.col-->
+
+								<div class="col-sm-4 col-md-4">
+									<div class="thumbnail">
+										<h2>Besh bolali yigitcha<span></span></h2>
+										<div class="thumbnail-img">
+											<img src="https://assets.asaxiy.uz/product/items/desktop/c8220db4ccd840899207cb8e59e400a02022061018293421645AfRJ9TI4m8.jpg" alt="blog-img">
+											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
+										
+										</div><!--/.thumbnail-img-->
+										<div class="caption">
+											<div class="blog-txt">
+												<h3><a href="#">$20</a></h3>
+												<p>
+													Bolalik - beboshlik, deymiz. Ammo bu davr zahmatlarga,
+													mashaggatlarga limmo-1im bo`1sa-chi? Beboshlikka, sho`xliklarga o'rin
+													golarmikan? Bunday bolaning galbi , dunyosi kattalar hayotiga yagin
+													bo`1adi. O'zi bilib-bilmay taffakuri o'sib, irodasi metin insonga aylanadi.
+													
+												</p>
+												
+											</div><!--/.blog-txt-->
+										</div><!--/.caption-->
+									</div><!--/.thumbnail-->
+
+								</div><!--/.col-->
+
+							</div><!--/.row-->
+						</div><!--/.blog-content-->
+					</div><!--/.blog-details-->
+				</div><!--/.container-->
+
+		</section><!--/.blog-->
+		<!--blog end-->
+
+		
+	
+
+
+
+
+		<script src="{% static 'assets/js/jquery.js'%}"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+		<!--modernizr.min.js-->
+		<script  src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+		<!--bootstrap.min.js-->
+		<script  src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+
+		<!-- bootsnav js -->
+		<script src="{% static 'assets/js/bootsnav.js'%}"></script>
+
+		<!-- jquery.filterizr.min.js -->
+		<script src="{% static 'assets/js/jquery.filterizr.min.js'%}"></script>
+
+		<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+		<!--jquery-ui.min.js-->
+        <script src="{% static 'assets/js/jquery-ui.min.js'%}"></script>
+
+        <!-- counter js -->
+		<script src="{% static 'assets/js/jquery.counterup.min.js'%}"></script>
+		<script src="{% static 'assets/js/waypoints.min.js'%}"></script>
+
+		<!--owl.carousel.js-->
+        <script  src="{% static 'assets/js/owl.carousel.min.js'%}"></script>
+
+        <!-- jquery.sticky.js -->
+		<script src="{% static 'assets/js/jquery.sticky.js'%}"></script>
+
+        <!--datepicker.js-->
+        <script  src="{% static 'assets/js/jquery.sticky.js'%}"></script>
+
+		<!--Custom JS-->
+		<script src="{% static 'assets/js/custom.js'%}"></script>
+
+
+	</body>
+
+</html>
+{% endblock content %}
